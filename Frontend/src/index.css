@@ -1,0 +1,253 @@
+.menu {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 38px;
+  color: #252525;
+  margin-left: 110px;
+}
+
+.item{
+  color: #000;
+  text-decoration: none;
+}
+.menu .item{
+  margin-left: 20px;
+  color: #fff;
+  margin-top: 7px;
+  background: transparent;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+.col-sm-3 {
+  flex: 0 0 auto;
+  width: 17%;
+  background: #7968DC;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: transparent;
+}
+.nav-link {
+  color: rgb(0, 255, 98);
+  font-family: 'Poppins';
+  font-weight: 800;
+}
+.dropdown, .dropend, .dropstart, .dropup {
+  margin-left: 75px;
+}
+.item {
+  font-family: 'Poppins';
+  font-weight: 800;
+  color: #000;
+  text-decoration: none;
+}
+.item .menu {
+  color: #fff;
+  margin-left: 80px;
+}
+.form {
+  Width: 239px;
+  Height: 45px;
+  border-radius: 50px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  margin-right: 22px;
+  margin-bottom: 14px;
+}
+.formDtals {
+  Width: 500px;
+  Height: 45px;
+  border-radius: 50px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  margin-left: 480px;
+  margin-bottom: 14px;
+}
+.formModal {
+  Width: 400px;
+  Height: 45px;
+  border-radius: 5px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  margin-right: 22px;
+  margin-bottom: 14px;
+}
+.button {
+  width: 498px;
+  height: 45px;
+  border-radius: 50px;
+  background: #7968DC;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 21px;
+  margin-right: 21px;
+}
+.card {
+  width: 221px;
+  height: 50px;
+  background: "#7968DC";
+  margin-right: 25px;
+  margin-bottom: 18px;
+}
+.cardact {
+  width: 122px;
+  height: 50px;
+  background: "#7968DC";
+  margin-right: 25px;
+  margin-bottom: 18px;
+}
+.headtxt {
+  font-family: 'Hind', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  line-height: 15px;
+}
+.headact {
+  font-family: 'Hind', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  line-height: 15px;
+}
+.txt{
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center; 
+  color: #FFFFFF;
+  line-height: 15px;
+}
+
+.post .postform{
+  Width: 437px;
+  Height: 45px;
+  border-radius: 50px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  margin-right: 21px;
+  margin-bottom: 14px;
+}
+.post .postDetails{
+  Width: 437px;
+  Height: 45px;
+  border-radius: 20px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  margin-right: 21px;
+  margin-bottom: 14px;
+}
+.post .postbtn {
+  width: 900px;
+  height: 45px;
+  border-radius: 50px;
+  background: #7968DC;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  margin-right: 21px;
+}
+.post .postcard {
+  width: 242px;
+  height: 50px;
+  background: "#7968DC";
+  margin-right: 25px;
+  margin-bottom: 18px;
+}
+.post .postcardDtails {
+  width: 500px;
+  height: 50px;
+  background: "#7968DC";
+  margin-right: 25px;
+  margin-bottom: 18px;
+}
+.active .postcardDtails {
+  width: 500px;
+  height: 50px;
+  background: "#7968DC";
+  margin-right: 25px;
+  margin-bottom: 18px;
+}
+.login{
+  color: #000;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+}
+.loginalert{
+  color: #000;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 32px;
+}
+.loginbtn{
+  color: #fff;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+}
+.logincreate{
+  color: blue;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 134px;
+}
+a {
+  text-decoration: none;
+}
+.signupcreate {
+  color: blue;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 181px;
+}
+.dropdown-item {
+  padding: .25rem 1rem;
+  clear: both;
+  font-weight: 600;
+  color: red;
+  text-align: center;
+  border: 0;
+  font-family: Poppins;
+  font-size: 21px;
+}
+.del {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 20px;
+  width: 116px;
+  height: 50px;
+}
+.delDetails {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 20px;
+  width: 56px;
+  height: 50px;
+}
+.delClass {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 20px;
+  width: 106px;
+  height: 50px;
+}
+.btnMdl {
+  margin-left: 244px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+}
+.mdl{
+  padding: 10px 50px;
+}
