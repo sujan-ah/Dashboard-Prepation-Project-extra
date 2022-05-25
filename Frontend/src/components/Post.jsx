@@ -84,7 +84,7 @@ const Post = () => {
 
   return (
     <>
-      <Container className='mt-5 post' style={{marginBottom: 100}} >
+      <Container className='post' style={{marginBottom: 100}} >
         <Row>
           <div style={{display: "flex",marginLeft: 230, marginBottom: 10}}>
             <div>
@@ -131,7 +131,7 @@ const Post = () => {
         </Row>
       </Container>
 
-      <Container className='mt-5'>
+      <Container>
         <Row className='post' style={{display: "flex",width: "100%",marginLeft: "95px"}}>
           <>
             <Card style={{background: "#023A92"}} className='postcard' >

@@ -88,7 +88,7 @@ const Activity = () => {
 
   return (
     <>
-      <Container style={{marginBottom: 100}} className='mt-5'>
+      <Container style={{marginBottom: 100}}>
       <Row>
         <div style={{display: "flex",marginLeft: 480, marginBottom: 10}}>
           <div>
@@ -134,7 +134,7 @@ const Activity = () => {
       </Row>
       </Container>
 
-      <Container className='mt-5 active'>
+      <Container className='active'>
         <Row style={{display: "flex", width: "100%", marginLeft: "100px"}}>
           <>
             <Card style={{background: "#023A92"}} className='card' >

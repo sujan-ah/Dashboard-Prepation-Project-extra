@@ -42,15 +42,14 @@ const Details = () => {
   const handleShow = async (id) =>{
     // console.log(id);
     const {data} = await axios.get(`http://localhost:8000/api/details/${id}`)
-    console.log(data);
+    setShow(true)
+
     setName(data.name)
     setDesignation(data.designation)
     setOfficetime(data.officetime)
     setOffday(data.dayoff)
+    
     setProid(data._id)
-
-
-    setShow(true)
   }
   let handleModalSubmit = async (e) =>{
     e.preventDefault()
@@ -86,7 +85,7 @@ const Details = () => {
   return (
     <Container>
       <Row>
-        <Container style={{marginBottom: 100}} className='mt-5'>
+        <Container style={{marginBottom: 100}}>
           <Row className='Form'>
           <div style={{display: "flex",marginLeft: 450, marginBottom: 10}}>
             <div>
@@ -136,51 +135,49 @@ const Details = () => {
             Submit
           </Button>
           </Row>
-          
         </Container>
 
-        <Container className='mt-2'>
+        <Container>
           <Row style={{display: "flex", width: "100%",    marginLeft: "112px"}}>
-             <>
-               <Card style={{background: "#023A92"}} className='card' >
-                  <Card.Body>
-                    <Card.Title className='headtxt'>
-                      Name
-                    </Card.Title>
-                  </Card.Body>
-                </Card>
-                <Card style={{background: "#023A92"}} className='card'>
-                  <Card.Body>
-                    <Card.Title className='headtxt'>
-                      Designation
-                    </Card.Title>
-                  </Card.Body>
-                </Card>
-                <Card style={{background: "#023A92"}} className='card'>
-                  <Card.Body>
-                    <Card.Title className='headtxt' >
-                      Officetime
-                    </Card.Title>
-                  </Card.Body>
-                </Card>
-                <Card style={{background: "#023A92"}} className='card'>
-                  <Card.Body>
-                    <Card.Title className='headtxt'>
-                      Offday
-                    </Card.Title>
-                  </Card.Body>
-                </Card>
-                <Card style={{background: "#023A92"}} className='cardact' >
-                  <Card.Body>
-                    <Card.Title className='headact'>
-                    Action
-                    </Card.Title>
-                  </Card.Body>
-                </Card>
-                <br/>
-              </>
+            <>
+              <Card style={{background: "#023A92"}} className='card' >
+                <Card.Body>
+                  <Card.Title className='headtxt'>
+                    Name
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+              <Card style={{background: "#023A92"}} className='card'>
+                <Card.Body>
+                  <Card.Title className='headtxt'>
+                    Designation
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+              <Card style={{background: "#023A92"}} className='card'>
+                <Card.Body>
+                  <Card.Title className='headtxt' >
+                    Officetime
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+              <Card style={{background: "#023A92"}} className='card'>
+                <Card.Body>
+                  <Card.Title className='headtxt'>
+                    Offday
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+              <Card style={{background: "#023A92"}} className='cardact' >
+                <Card.Body>
+                  <Card.Title className='headact'>
+                  Action
+                  </Card.Title>
+                </Card.Body>
+              </Card>
               <br/>
-
+            </>
+            <br/>
 
             {details.map((item)=>(
               userInfo._id == item.user &&

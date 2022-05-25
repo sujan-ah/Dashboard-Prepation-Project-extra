@@ -83,7 +83,7 @@ const Class = () => {
 
   return (
     <>
-      <Container style={{marginBottom: 100}} className='mt-5'>
+      <Container style={{marginBottom: 100}}>
         <Row>
           <div style={{display: "flex",marginLeft: 315, marginBottom: 10}}>
             <div>
@@ -132,7 +132,7 @@ const Class = () => {
         </Row>
       </Container>
 
-      <Container className='mt-5'>
+      <Container>
           <Row style={{display: "flex", width: "80%", marginLeft: "270px"}}>
              <>
                <Card style={{background: "#023A92"}} className='card' >

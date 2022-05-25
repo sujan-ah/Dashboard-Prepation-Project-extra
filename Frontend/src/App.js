@@ -10,18 +10,18 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useContext, useEffect } from "react";
 import { Store } from "./Store";
+import imgData from "./imgData";
+
 
 
 function App() {
-  // const navigate = useNavigate()
-
   const {state,dispatch} = useContext(Store)
   const {userInfo} = state
+  console.log(userInfo);
 
   let handleLogout = () =>{
     dispatch({type: "USER_LOGOUT"})
     localStorage.removeItem("userInfo")
-    // navigate('/signin')
   }
 
 
@@ -33,27 +33,23 @@ function App() {
       <ToastContainer position="bottom-center" limit={1} />
         {userInfo 
         ?
-          // userInfo == userInfo._id &&
-        
           <>
             <Row style={{height: 950, }}>
               <Col sm={3} className="list">
+                <div className='dealbox' style={{backgroundImage: `url(${imgData.img})`}}>
+                </div> 
+                <span style={{marginTop: 20}} className="upadhi2">
+                  <b style={{marginLeft: 22}} className="upadhi">Name: </b> A B M Shawon Islam <br/>
+                  <b className="upadhi">Designation: </b>MERN Stack Developer<br/>
+                  <b className="upadhi">Office Time: </b>11am - 8pm<br/>
+                  <b className="upadhi">Offday: </b>Sunday
+                </span>
+
                 <Nav variant="pills" className="flex-column">
-                  <h3 style={{color: "#fff", marginTop: 150}}>
-                  <NavDropdown 
-                    title={userInfo.name} 
-                    id="basic-nav-dropdown"
-                  > 
-                    <NavDropdown.Item 
-                      onClick={handleLogout}
-                    >
-                      Logout
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  </h3>
-                  <div style={{marginTop: 50}}>
+                  
+                  <div style={{marginTop: 64}}>
                     <Link className="item" to="/details">
-                      <h3 className="menu" style={{marginBottom: 20}}>
+                      <h3 className="menu" style={{marginBottom: 30}}>
                         Emplyee List
                       </h3>
                     </Link>
@@ -80,6 +76,18 @@ function App() {
                 </Nav>
               </Col>
               <Col sm={9}>
+                <span style={{color: "#fff", marginTop: 50}}>
+                  <NavDropdown 
+                    title={userInfo.name} 
+                    id="basic-nav-dropdown"
+                  > 
+                    <NavDropdown.Item 
+                      onClick={handleLogout}
+                    >
+                      Logout
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                </span>
                 <Routes>
                   <Route path="/details" element={<Details />} />
                   <Route path="/class" element={<Class />} />
