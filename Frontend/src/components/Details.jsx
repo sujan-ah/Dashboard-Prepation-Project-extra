@@ -14,7 +14,6 @@ const Details = () => {
   const handleClose = () => setShow(false);
 
   const [details,setDetails] = useState([])
-  // console.log(details);
 
   const [name,setName] = useState('')
   const [designation,setDesignation] = useState('')

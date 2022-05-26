@@ -13,6 +13,7 @@ userRouter.post('/signin',async (req, res) => {
                 name: user.name,
                 email: user.email,
                 idAdmin: user.isAdmin,
+                img: user.img
                 // token: generateToken(user)
             })
             return

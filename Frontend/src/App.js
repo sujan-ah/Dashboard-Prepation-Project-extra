@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route,Link,useNavigate } from "react-router-dom";
-import { Container,Navbar,Nav,NavDropdown,Card,Col,Tab,Row } from 'react-bootstrap'
+import { Container,Navbar,Nav,NavDropdown,Card,Col,Tab,Row, ListGroup } from 'react-bootstrap'
 import Details from './components/Details';
 import Class from "./components/Class";
 import Post from "./components/Post";
@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useContext, useEffect } from "react";
 import { Store } from "./Store";
 import imgData from "./imgData";
+import imgData2 from "./imgData2";
 
 
 
@@ -36,10 +37,17 @@ function App() {
           <>
             <Row style={{height: 950, }}>
               <Col sm={3} className="list">
-                <div className='dealbox' style={{backgroundImage: `url(${imgData.img})`}}>
-                </div> 
+                {userInfo.name == "ustad" &&
+                 <div className='dealbox' style={{backgroundImage: `url(${imgData2.img2})`}}>
+                 </div> 
+                }
+                {userInfo.name == "sujan" &&
+                 <div className='dealbox' style={{backgroundImage: `url(${imgData.img})`}}>
+                 </div> 
+                }
+               
                 <span style={{marginTop: 20}} className="upadhi2">
-                  <b style={{marginLeft: 22}} className="upadhi">Name: </b> A B M Shawon Islam <br/>
+                  <b style={{marginLeft: 22}} className="upadhi">Name: </b> K H Sujan <br/>
                   <b className="upadhi">Designation: </b>MERN Stack Developer<br/>
                   <b className="upadhi">Office Time: </b>11am - 8pm<br/>
                   <b className="upadhi">Offday: </b>Sunday
@@ -48,25 +56,26 @@ function App() {
                 <Nav variant="pills" className="flex-column">
                   
                   <div style={{marginTop: 64}}>
-                    <Link className="item" to="/details">
-                      <h3 className="menu" style={{marginBottom: 30}}>
-                        Emplyee List
-                      </h3>
-                    </Link>
+                      <Link className="item list-group" to="/details">
+                        <h3 className="menu" style={{marginBottom: 20}}>
+                          Emplyee List
+                        </h3>
+                      </Link>
+                    
 
-                    <Link className="item" to="/class">
-                      <h3 className="menu"  style={{marginBottom: 20}}>
+                    <Link className="item list-group" to="/class">
+                      <h3 className="menu "  style={{marginBottom: 20}}>
                         Today's Class
                       </h3>
                     </Link>
 
-                    <Link className="item" to="/post">
+                    <Link className="item list-group" to="/post">
                       <h3 className="menu"  style={{marginBottom: 20}}>
                         Post Activity
                       </h3>
                     </Link>
 
-                    <Link className="item" to="/activity">
+                    <Link className="item list-group" to="/activity">
                       <h3 className="menu"  style={{marginBottom: 20}}>
                         Activity List
                       </h3>

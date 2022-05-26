@@ -71,10 +71,6 @@ const Activity = () => {
   },[])
 
 
-  
-
-  
-
   const {state,dispatch} = useContext(Store)
   const {userInfo} = state
   // console.log(userInfo._id);

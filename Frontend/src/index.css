@@ -29,7 +29,6 @@
   background-color: transparent;
 }
 .nav-link {
-  color: red;
   font-family: 'Poppins';
   font-weight: 800;
   font-size: 30px;
@@ -276,4 +275,15 @@ a {
   line-height: 21px;
   color: #FFFFFF;
   margin-left: 22px;
+}
+
+.list-group :hover{
+  color: #000;
+  background-color: green;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 30px;
+  width: 230px;
+  text-align: center;
+  font-family: 'Hind', sans-serif;
 }
