@@ -55,8 +55,44 @@ function App() {
 
                 <Nav variant="pills" className="flex-column">
                   
-                  <div style={{marginTop: 64}}>
-                      <Link className="item list-group" to="/details">
+                  
+
+
+                  <div style={{marginTop: 60}}>
+
+                    <Link to='/details'>
+                      <Nav.Item>
+                        <Nav.Link eventKey="first">
+                          <h4 className="menu ">Emplyee List</h4>
+                        </Nav.Link>
+                      </Nav.Item>
+                    </Link>
+
+                    <Link to="/class">
+                      <Nav.Item>
+                        <Nav.Link eventKey="second">
+                          <h4 className="menu ">Today's Class</h4>
+                        </Nav.Link>
+                      </Nav.Item>
+                    </Link>
+
+                    <Link to='/post'>
+                      <Nav.Item>
+                        <Nav.Link eventKey="third">
+                          <h4 className="menu ">Post Activity</h4>
+                        </Nav.Link>
+                      </Nav.Item>
+                    </Link>
+
+                    <Link to='/activity'>
+                      <Nav.Item>
+                        <Nav.Link eventKey="forth">
+                          <h4 className="menu ">Activity List</h4>
+                        </Nav.Link>
+                      </Nav.Item>
+                    </Link>
+
+                      {/* <Link className="item list-group" to="/details">
                         <h3 className="menu" style={{marginBottom: 20}}>
                           Emplyee List
                         </h3>
@@ -79,7 +115,7 @@ function App() {
                       <h3 className="menu"  style={{marginBottom: 20}}>
                         Activity List
                       </h3>
-                    </Link>
+                    </Link> */}
                   </div>
                 
                 </Nav>

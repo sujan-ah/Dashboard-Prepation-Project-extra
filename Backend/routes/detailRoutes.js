@@ -36,21 +36,22 @@ detailRouter.get('/:id', async (req,res)=>{
   const activitie = await Details.findById(req.params.id)
   res.send(activitie)
 })
-detailRouter.put('/edit', async (req,res)=>{
-  let pro = {
-      name: req.body.name,
-      designation: req.body.designation,
-      officetime: req.body.officetime,
-      dayoff: req.body.dayoff,
-  }
-  Details.findByIdAndUpdate(req.body.id, pro,function (err, docs) {
-      if (err){
-          console.log(err)
-      }
-      else{
-          console.log("Edited : ", docs);
-      }
-  });
-})
+
+// detailRouter.put('/edit', async (req,res)=>{
+//   let pro = {
+//       name: req.body.name,
+//       designation: req.body.designation,
+//       officetime: req.body.officetime,
+//       dayoff: req.body.dayoff,
+//   }
+//   Details.findByIdAndUpdate(req.body.id, pro,function (err, docs) {
+//       if (err){
+//           console.log(err)
+//       }
+//       else{
+//           console.log("Edited : ", docs);
+//       }
+//   });
+// })
 
 module.exports = detailRouter

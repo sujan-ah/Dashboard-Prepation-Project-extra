@@ -28,6 +28,7 @@ const Login = () => {
             dispatch({type: "USER_SIGNIN", payload: data})
             localStorage.setItem('userInfo',JSON.stringify(data))
             navigate("/details")
+            toast.success("Login Succesful")
         }catch(err){
             toast.error("Invalid email or password")
         }

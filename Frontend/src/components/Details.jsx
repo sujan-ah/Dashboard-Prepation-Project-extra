@@ -50,19 +50,19 @@ const Details = () => {
     
     setProid(data._id)
   }
-  let handleModalSubmit = async (e) =>{
-    e.preventDefault()
-    setShow(false)
-    console.log(proid);
-    let {data} = await axios.put('http://localhost:8000/api/details/edit',{
-      id: proid,
-      name: name,
-      designation: designation,
-      officetime: officetime,
-      dayoff: dayoff,
-    })
-    console.log(data);
-  }
+  // let handleModalSubmit = async (e) =>{
+  //   e.preventDefault()
+  //   setShow(false)
+  //   console.log(proid);
+  //   let {data} = await axios.put('http://localhost:8000/api/details/edit',{
+  //     id: proid,
+  //     name: name,
+  //     designation: designation,
+  //     officetime: officetime,
+  //     dayoff: dayoff,
+  //   })
+  //   console.log(data);
+  // }
 
   useEffect(()=>{
     async function fetchData() {
@@ -282,7 +282,7 @@ const Details = () => {
             <Button 
               variant="primary" 
               type="submit"
-              onClick={handleModalSubmit}
+              // onClick={handleModalSubmit}
               className='btnMdl'
               style={{background: "#7968DC"}}
             >
