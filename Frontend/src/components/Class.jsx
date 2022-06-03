@@ -34,7 +34,7 @@ const Class = () => {
 
   let handleDelete = (id) =>{
     console.log(id);
-    axios.post(`http://localhost:8000/api/classes/del`,{
+    axios.post('http://localhost:8000/api/classes/del',{
       id: id
     })
   }

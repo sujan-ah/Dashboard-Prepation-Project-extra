@@ -18,7 +18,6 @@ import imgData2 from "./imgData2";
 function App() {
   const {state,dispatch} = useContext(Store)
   const {userInfo} = state
-  console.log(userInfo);
 
   let handleLogout = () =>{
     dispatch({type: "USER_LOGOUT"})

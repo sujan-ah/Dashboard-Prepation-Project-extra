@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
-import { Container,Form,Button, Row,Card,Modal,Col,Table } from 'react-bootstrap'
+import { Container,Form,Button, Row,Card,Modal } from 'react-bootstrap'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import { Store } from '../Store';
@@ -10,12 +10,8 @@ import { RiDeleteBin5Fill } from 'react-icons/ri';
 const Activity = () => {
   const navigate = useNavigate()
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
-
   const [activities,setActivites] = useState([])
-  // console.log(activities);
-
   const [name,setName] = useState('')
   const [time,setTime] = useState('')
   const [details,setDetails] = useState('')
@@ -23,7 +19,7 @@ const Activity = () => {
 
   let handleSubmit = async (e) =>{
     e.preventDefault()
-    axios.post('http://localhost:8000/api/activities',{
+    await axios.post('http://localhost:8000/api/activities',{
       name: name,
       time: time,
       details: details,
@@ -31,35 +27,29 @@ const Activity = () => {
     })
   }
   let handleDelete = (id) =>{
-    // console.log(id);
-    axios.post(`http://localhost:8000/api/activities/del`,{
+    axios.post('http://localhost:8000/api/activities/del',{
       id: id
     })
   }
 
-  
   const handleShow = async (id) =>{
-    // console.log(id);
     const {data} = await axios.get(`http://localhost:8000/api/activities/${id}`)
     console.log(data);
+    setShow(true)
+    
     setName(data.name)
     setTime(data.time)
     setDetails(data.details)
     setProid(data._id)
-
-
-    setShow(true)
   }
   let handleModalSubmit = async (e) =>{
     e.preventDefault()
-    console.log(proid);
-    let {data} = await axios.put('http://localhost:8000/api/activities/edit',{
+    await axios.put('http://localhost:8000/api/activities/edit',{
       id: proid,
       name: name,
       time: time,
       details: details,
     })
-    console.log(data);
   }
   
   useEffect(()=>{
@@ -70,10 +60,8 @@ const Activity = () => {
     fetchData()
   },[])
 
-
-  const {state,dispatch} = useContext(Store)
+  const {state} = useContext(Store)
   const {userInfo} = state
-  // console.log(userInfo._id);
 
   useEffect(() => {
   if(!userInfo){
@@ -165,51 +153,49 @@ const Activity = () => {
 
           {activities.map((item)=>(
             userInfo._id == item.user &&
-          <>
-          <Card style={{background: "#7968DC"}} className='card' >
-              <Card.Body>
-                <Card.Title className='txt'>
-                {item.name}
-                </Card.Title>
-              </Card.Body>
-            </Card>
-            <Card style={{background: "#7968DC"}} className='card'>
-              <Card.Body>
-                <Card.Title className='txt'>
-                {item.time}
-                </Card.Title>
-              </Card.Body>
-            </Card>
-            <Card style={{background: "#7968DC"}} className='postcardDtails'>
-              <Card.Body>
-                <Card.Title className='txt'>
-                {item.details}
-                </Card.Title>
-              </Card.Body>
-            </Card>
-            <br/>
+            <>
+              <Card style={{background: "#7968DC"}} className='card' >
+                <Card.Body>
+                  <Card.Title className='txt'>
+                  {item.name}
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+              <Card style={{background: "#7968DC"}} className='card'>
+                <Card.Body>
+                  <Card.Title className='txt'>
+                  {item.time}
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+              <Card style={{background: "#7968DC"}} className='postcardDtails'>
+                <Card.Body>
+                  <Card.Title className='txt'>
+                  {item.details}
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+              <br/>
 
-            <Button 
-                  variant="primary" 
-                  type="submit"
-                  onClick={()=> handleShow(item._id)}
-                  style={{marginRight: 10,background: "#3F0082"}}
-                  className='delDetails'
-                  
-                >
-                  <FaEdit/>
-                </Button>
-                <Button 
-                  variant="danger"
-                  type="submit"
-                  onClick={()=>handleDelete(item._id)}
-                  className='delDetails'
-                  style={{background: "#3F0082"}}
-                >
-                  <RiDeleteBin5Fill/>
-                </Button>
-        
-          </>
+              <Button 
+                variant="primary" 
+                type="submit"
+                onClick={()=> handleShow(item._id)}
+                style={{marginRight: 10,background: "#3F0082"}}
+                className='delDetails'
+              >
+                <FaEdit/>
+              </Button>
+              <Button 
+                variant="danger"
+                type="submit"
+                onClick={()=>handleDelete(item._id)}
+                className='delDetails'
+                style={{background: "#3F0082"}}
+              >
+                <RiDeleteBin5Fill/>
+              </Button>
+            </>
           ))} 
 
         </Row>

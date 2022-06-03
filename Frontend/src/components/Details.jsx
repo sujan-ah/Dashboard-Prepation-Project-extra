@@ -33,7 +33,7 @@ const Details = () => {
   }
   let handleDelete = (id) =>{
     console.log(id);
-    axios.post(`http://localhost:8000/api/details/del`,{
+    axios.post('http://localhost:8000/api/details/del',{
       id: id
     })
   }

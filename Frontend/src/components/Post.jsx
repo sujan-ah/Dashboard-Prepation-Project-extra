@@ -34,7 +34,7 @@ const Post = () => {
   }
   let handleDelete = (id) =>{
     console.log(id);
-    axios.post(`http://localhost:8000/api/posts/del`,{
+    axios.post('http://localhost:8000/api/posts/del',{
       id: id
     })
   }

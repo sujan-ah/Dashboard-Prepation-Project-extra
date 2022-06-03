@@ -14,13 +14,13 @@ activityRouter.post('/', function (req, res) {
     abc.save()
     // console.log(abc);
 })
+
 activityRouter.get('/', async (req,res)=>{
     const activitie = await Activity.find()
     res.send(activitie)
 })
 
 activityRouter.post('/del', function (req, res) {
-   console.log(req.body.id)
     Activity.findByIdAndDelete(req.body.id, function (err, docs) {
         if (err){
             console.log(err)
@@ -30,17 +30,14 @@ activityRouter.post('/del', function (req, res) {
         }
     });
 })
-
 activityRouter.get('/:id', async (req,res)=>{
     console.log(req.params);
     const activitie = await Activity.findById(req.params.id)
     res.send(activitie)
 })
+
 activityRouter.put('/edit', async (req,res)=>{
-    console.log(req.body.id);
-    console.log(req.body.name);
-    console.log(req.body.time);
-    console.log(req.body.details);
+    // console.log(req.body);
     let pro = {
         name: req.body.name,
         time: req.body.time,
